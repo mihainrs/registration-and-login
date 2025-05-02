@@ -1,0 +1,22 @@
+{% extends "reglog/base.html" %}
+
+{% block content %}
+<section class="mainpage">
+<h1 class="mainpage-title">Welcome, {{ user.username|default:"stranger"}}!</h1>
+<form method="POST">
+    {% csrf_token %}
+    {% if user.is_authenticated == False %}
+    <div class="Inputs">
+        <label for="username" class="form-label">Username:</label>
+        {{ form.username }}  
+    <div class="Inputs">
+        <label for="password" class="form-label">Password:</label>
+        {{ form.password }}  
+    </div>
+    <button type="submit">Login</button>
+    {% else %}
+    <a href="{% url 'accountpage' %}">Account</a>
+    {% endif %}
+</form>
+</section>
+{% endblock %}

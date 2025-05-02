@@ -1,0 +1,37 @@
+{% extends 'reglog/base.html' %}
+
+{% block content %}
+  <section class="signup-content">
+    <h1>Sign up</h1>
+    <form method="POST" class="signup-form">
+      {% csrf_token %}
+      <div class="Inputs">
+        <label for="username" class="form-label">Username:</label>
+        {{ form.username }}
+      </div>
+      <div class="Inputs">
+        <label for="pass1" class="form-label">Password:</label>
+        {{ form.password1 }}
+      </div>
+      <div class="Inputs">
+        <label for="pass2" class="form-label">Confirm Password:</label>
+        {{ form.password2 }}
+      </div>
+      <div class="Inputs">
+        <label for="fname" class="form-label">First Name:</label>
+        {{ form.first_name }}
+      </div>
+      <div class="Inputs">
+        <label for="lname" class="form-label">Last Name:</label>
+        {{ form.last_name }}
+      </div>
+
+      <div class="Inputs">
+        <label for="email" class="form-label">E-mail:</label>
+        {{ form.email }}
+      </div>
+
+      <button class="signup-button" type="submit">Sign me up!</button>
+    </form>
+  </section>
+{% endblock %}

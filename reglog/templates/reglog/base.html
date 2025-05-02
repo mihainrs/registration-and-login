@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration-login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <ul class="navbar">
+      <li>
+        <a href="{% url 'mainpage' %}">Main page</a>
+      </li>
+      <li>
+        {% if user.is_authenticated == True %}
+        <a href="{% url 'accountpage' %}">Account page</a>
+        {% endif %}
+      </li>
+      <li>
+        <a href="{% url 'signup' %}">Sign up</a>
+      </li>
+    </ul>
+
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>

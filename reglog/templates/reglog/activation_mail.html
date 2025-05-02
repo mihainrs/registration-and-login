@@ -1,0 +1,7 @@
+Hey {{ user.username }},
+
+In order to confirm your email address and complete the registration process, please click the link below (not a scam, btw):
+
+<a href="http://{{ domain }}{% url 'activate' uidb64=uid token=token %}">Confirm your email</a>
+
+Thanks! :D

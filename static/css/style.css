@@ -1,0 +1,86 @@
+body{
+    margin:0;
+}
+
+/* Setting up the navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-evenly;
+    gap: 5em;
+    background-color: lavender;
+    padding:2em 0;
+    margin:0;
+}
+
+/* making links look better */
+
+a{
+    text-decoration: none;
+    padding: 0.5em;
+    border-left: 1px solid rgb(162, 25, 196);
+}
+
+a:hover{
+    background-color: rgb(253, 178, 203);
+    border:inset 2px;
+}
+
+ul{
+    list-style: none;
+}
+
+
+.mainpage{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-size:1rem;
+}
+
+.accountpage{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-size:2rem;
+}
+
+/* sign up */
+
+.signup-content{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signup-form{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* input fields */
+
+.form-control{
+    margin:0.5em 0 1em 0;
+}
+
+/* button */
+
+.signup-button{
+    margin:2em 4em;
+}
+
+.btn{
+    border:none;
+    background-color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    border-left: 1px solid rgb(162, 25, 196);
+}
+
+.btn:hover{
+    background-color: rgb(253, 178, 203);
+    border:inset 2px;
+    cursor: pointer;
+}
